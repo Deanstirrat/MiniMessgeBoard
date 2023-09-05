@@ -1,0 +1,9 @@
+extends layout
+
+block content
+      h1= title
+      a(href='/new') New Post
+      ul
+            each message in messages
+                  h3= message.text
+                  p -#{message.user} Date: #{message.added}
